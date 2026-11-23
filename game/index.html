@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Coral City: Neon Tide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="src/style.css">
+<script>
+  // Early error trap: anything that throws before the game boots is still
+  // counted by the self-test report wired up in shots.js.
+  window.__errs = [];
+  window.addEventListener('error', function (e) {
+    window.__errs.push(String((e && (e.message || e.error)) || 'error'));
+  });
+</script>
+</head>
+<body>
+<!-- Coral City: Neon Tide — a top-down open-world crime game in vanilla JS.
+     Everything renders into this one canvas; there is no build step and
+     nothing is fetched from the network. -->
+<canvas id="game" width="1280" height="800"></canvas>
+<div id="shot-report" hidden></div>
+<script src="src/random.js"></script>
+<script src="src/config.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/world.js"></script>
+<script src="src/input.js"></script>
+<script src="src/entities.js"></script>
+<script src="src/traffic.js"></script>
+<script src="src/police.js"></script>
+<script src="src/missions.js"></script>
+<script src="src/render.js"></script>
+<script src="src/save.js"></script>
+<script src="src/shots.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>

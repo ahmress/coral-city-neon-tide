@@ -1,0 +1,33 @@
+/* Coral City: Neon Tide — page chrome. The game itself is all canvas. */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #070912;
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+canvas#game {
+  display: block;
+  width: min(100vw, 160vh);
+  aspect-ratio: 8 / 5;
+  background: #0d1020;
+  box-shadow: 0 0 64px rgba(20, 220, 255, 0.14), 0 0 18px rgba(255, 62, 160, 0.12);
+  cursor: crosshair;
+}
+#shot-report {
+  display: none;
+}
+
+/* The self-test report stays in the DOM for the harness to read, but it is
+   never part of the picture a player sees. */
+#shot-report {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
